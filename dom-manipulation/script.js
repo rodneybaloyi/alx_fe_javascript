@@ -6,15 +6,15 @@ const quotes = [
     { text: "The purpose of our lives is to be happy.", category: "Happiness" },
 ];
 
-function showRandomQuote() {
+function displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quoteDisplay = document.getElementById("quoteDisplay");
     quoteDisplay.innerHTML = `"${quotes[randomIndex].text}" - ${quotes[randomIndex].category}`;
 }
 
 function addQuote() {
-    const newQuoteText = document.getElementById("newQuoteText").value;
-    const newQuoteCategory = document.getElementById("newQuoteCategory").value;
+    const newQuoteText = document.getElementById("newQuoteText").value.trim();
+    const newQuoteCategory = document.getElementById("newQuoteCategory").value.trim();
 
     if (newQuoteText && newQuoteCategory) {
         quotes.push({ text: newQuoteText, category: newQuoteCategory });
@@ -23,14 +23,14 @@ function addQuote() {
         document.getElementById("newQuoteText").value = '';
         document.getElementById("newQuoteCategory").value = '';
 
-        showRandomQuote();
+        displayRandomQuote();
     } else {
         alert("Please enter both a quote and a category.");
     }
 }
 
-// Set up event listener for the "Show New Quote" button
-document.getElementById("newQuote").addEventListener("click", showRandomQuote);
+// Set up event listener on the button with id "newQuote" to call displayRandomQuote
+document.getElementById("newQuote").addEventListener("click", displayRandomQuote);
 
-// Optional: show a quote initially when the page loads
-showRandomQuote();
+// Optionally, display a random quote on page load
+displayRandomQuote();
