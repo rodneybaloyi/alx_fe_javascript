@@ -1,0 +1,23 @@
+{
+  "name": "dynamic-quote-generator",
+  "version": "1.0.0",
+  "description": "A web application that generates random quotes based on selected categories and allows users to add new quotes dynamically.",
+  "main": "src/script.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined yet.'"
+  },
+  "keywords": [
+    "quotes",
+    "dynamic",
+    "generator",
+    "web",
+    "application"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
