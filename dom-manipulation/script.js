@@ -6,10 +6,10 @@ const quotes = [
     { text: "The purpose of our lives is to be happy.", category: "Happiness" },
 ];
 
-function showRandomQuote() {
+function displayRandomQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quoteDisplay = document.getElementById("quoteDisplay");
-    quoteDisplay.textContent = `"${quotes[randomIndex].text}" - ${quotes[randomIndex].category}`;
+    quoteDisplay.innerHTML = `"${quotes[randomIndex].text}" - ${quotes[randomIndex].category}`;
 }
 
 function addQuote() {
@@ -18,12 +18,16 @@ function addQuote() {
 
     if (newQuoteText && newQuoteCategory) {
         quotes.push({ text: newQuoteText, category: newQuoteCategory });
+
+        // Clear input fields
         document.getElementById("newQuoteText").value = '';
         document.getElementById("newQuoteCategory").value = '';
-        showRandomQuote();
+
+        displayRandomQuote();
     } else {
         alert("Please enter both a quote and a category.");
     }
 }
 
-document.getElementById("newQuote").addEventListener("click", showRandomQuote);
+// Set up event listener
+document.getElementById("newQuote").addEventListener("click", displayRandomQuote);
