@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Quote Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Quote Generator - Task 2</title>
 </head>
 <body>
-  <h1>Dynamic Quote Generator</h1>
+  <h1>Dynamic Quote Generator with Storage</h1>
 
   <div id="quoteDisplay"></div>
   <button id="newQuote">Show New Quote</button>
 
-  <!-- Placeholder where the form will be dynamically created -->
   <div id="formContainer"></div>
+
+  <!-- New elements for import/export -->
+  <button id="exportQuotes">Export Quotes as JSON</button>
+  <input type="file" id="importFile" accept=".json" />
 
   <script src="script.js"></script>
 </body>
