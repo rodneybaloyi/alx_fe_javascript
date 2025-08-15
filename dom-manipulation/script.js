@@ -23,7 +23,7 @@ function addQuote() {
     document.getElementById("newQuoteText").value = "";
     document.getElementById("newQuoteCategory").value = "";
 
-    // ✅ Show the new quote immediately
+    // Show the new quote immediately
     showRandomQuote();
 
     alert("Quote added successfully!");
@@ -32,8 +32,11 @@ function addQuote() {
   }
 }
 
-// ✅ Event listener for "Show New Quote" button
+// Event listener for "Show New Quote" button
 document.getElementById("newQuote").addEventListener("click", showRandomQuote);
 
-// ✅ Event listener for "Add Quote" button
-document.getElementById("addQuote
+// ✅ FIXED: Event listener for "Add Quote" button (this was cut off)
+document.getElementById("addQuote").addEventListener("click", addQuote);
+
+// Show a quote when page loads
+showRandomQuote();
