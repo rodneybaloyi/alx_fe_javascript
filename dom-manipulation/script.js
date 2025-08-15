@@ -22,14 +22,18 @@ function addQuote() {
     quotes.push({ text: newQuoteText, category: newQuoteCategory });
     document.getElementById("newQuoteText").value = "";
     document.getElementById("newQuoteCategory").value = "";
+
+    // ✅ Show the new quote immediately
+    showRandomQuote();
+
     alert("Quote added successfully!");
   } else {
     alert("Please fill in both fields.");
   }
 }
 
-// Event listener for new quote button
+// ✅ Event listener for "Show New Quote" button
 document.getElementById("newQuote").addEventListener("click", showRandomQuote);
 
-// Show a quote when page loads
-showRandomQuote();
+// ✅ Event listener for "Add Quote" button
+document.getElementById("addQuote
